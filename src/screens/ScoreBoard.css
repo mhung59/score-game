@@ -20,9 +20,6 @@ tr:hover {
     background-color: #f1f1f1; /* Màu nền khi hover */
 }
 
-strong {
-    color: #6200ee; /* Màu cho tổng điểm */
-}
 
 /* src/screens/ScoreBoard.css */
 
@@ -67,7 +64,7 @@ strong {
     font-size: 16px; /* Kích thước chữ */
     cursor: pointer; /* Hiển thị con trỏ tay khi hover */
     transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
-    margin-bottom: 15px; /* Khoảng cách dưới nút */
+    margin-top: 15px; /* Khoảng cách dưới nút */
 }
 
 .back-button:hover {
@@ -131,12 +128,21 @@ tr:hover {
 }
 
 .total-row {
-    background-color: #e9f7fe; /* Màu nền cho hàng tổng điểm */
     font-weight: bold; /* Chữ đậm cho tổng điểm */
+    position: sticky;
+    bottom: 0;
+    z-index: 1; /* Đảm bảo hàng tổng điểm nằm trên cùng */
+}
+
+
+strong {
+    color: white; /* Màu cho tổng điểm */
 }
 
 /* Điều chỉnh để hàng tổng điểm không bị cuộn */
 .total-row td {
+    background-color: blue; /* Màu nền cho hàng tổng điểm */
+    border-radius: 30px;
     position: sticky;
     bottom: 0;
     z-index: 1; /* Đảm bảo hàng tổng điểm nằm trên cùng */
@@ -145,6 +151,8 @@ tr:hover {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 th, td {
@@ -168,17 +176,7 @@ tr:hover {
     background-color: #ddd;
 }
 
-.total-row {
-    background-color: #e9f7fe; /* Màu nền cho hàng tổng điểm */
-    font-weight: bold; /* Chữ đậm cho tổng điểm */
-}
 
-/* Điều chỉnh để hàng tổng điểm không bị cuộn */
-.total-row td {
-    position: sticky;
-    bottom: 0;
-    z-index: 1; /* Đảm bảo hàng tổng điểm nằm trên cùng */
-}
 
 
 

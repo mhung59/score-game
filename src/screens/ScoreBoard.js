@@ -78,10 +78,12 @@ const ScoreBoard = () => {
     const totalScores = calculateTotalScores();
 
     return (
-        <div>
-            <h1>Bảng Điểm</h1>
-            <button className={"back-button"} onClick={() => navigate(-1)}>Trở về</button>
-            <span style={{marginLeft: "250px", fontWeight: "bold"}}>{scores.length}</span>
+        <div className="session-list">
+            <h1 style={{textAlign: "center"}}>Bảng Điểm</h1>
+            <div style={{textAlign: "center"}}>
+                <span style={{fontWeight: "bold", background: "red", padding: "10px", marginBottom: "50px", color: "white", borderRadius: "50%"}}>{scores.length}</span>
+            </div>
+            <br/>
             {players.length === 0 ? (
                 <p>Chưa có người chơi.</p>
             ) : (
@@ -109,7 +111,7 @@ const ScoreBoard = () => {
                                     </tr>
                                 ))
                             )}
-                            <tr>
+                            <tr className="total-row">
                                 {players.map((player) => (
                                     <td key={player}><strong>{totalScores[player] || 0}</strong></td>
                                 ))}
@@ -118,20 +120,24 @@ const ScoreBoard = () => {
                         </table>
                     </div>
 
-                    <button className={"add-score-button"} onClick={() => {
-                        setModalOpen(true);
-                        setNewScore(Array(players.length).fill('')); // Đặt lại điểm nếu không chỉnh sửa
-                    }}>Thêm Điểm</button>
+                    <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <button className={"back-button"} onClick={() => navigate("/")}>Trở về</button>
+                        <button className={"add-score-button"} onClick={() => {
+                            setModalOpen(true);
+                            setNewScore(Array(players.length).fill('')); // Đặt lại điểm nếu không chỉnh sửa
+                        }}>Thêm Điểm
+                        </button>
+                    </div>
 
                     <ScoreInputModal
-                        isOpen={isModalOpen}
-                        onClose={() => {
-                            setModalOpen(false);
-                            setEditingScoreRow(null); // Reset editing state
-                        }}
-                        onAddScore={addScoreRow}
-                        onUpdateScore={updateScoreRow}
-                        players={players}
+                    isOpen={isModalOpen}
+                    onClose={() => {
+                    setModalOpen(false);
+                    setEditingScoreRow(null); // Reset editing state
+                }}
+                onAddScore={addScoreRow}
+                onUpdateScore={updateScoreRow}
+                players={players}
                         editingScoreRow={editingScoreRow}
                         newScore={newScore}
                         setNewScore={setNewScore}
