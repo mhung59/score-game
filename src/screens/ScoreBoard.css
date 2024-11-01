@@ -162,7 +162,7 @@ th, td {
 }
 
 th {
-    background-color: #87CEEB; /* Màu xanh da trời cho header */
+    background-color: green; /* Màu xanh da trời cho header */
     position: sticky; /* Để header dính khi cuộn */
     top: 0; /* Vị trí dính ở trên cùng */
     z-index: 2; /* Đảm bảo header nằm trên nội dung */
