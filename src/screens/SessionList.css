@@ -1,0 +1,92 @@
+/* src/styles/SessionList.css */
+.session-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.session-list h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.session-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.session-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.session-list li:hover {
+    background-color: #e0e0e0; /* Màu nền khi hover */
+}
+
+.session-list button {
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.session-list button:hover {
+    background-color: #3700b3; /* Màu nền khi hover */
+}
+
+/* src/screens/SessionList.css */
+
+.session-list {
+    padding: 20px;
+}
+
+.session-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.session-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0; /* Màu nền cho mỗi phiên */
+    border-radius: 5px;
+    overflow: hidden; /* Đảm bảo phần tử không bị tràn */
+}
+
+.session-list span {
+    flex-grow: 1; /* Chiếm không gian còn lại */
+    white-space: nowrap; /* Không wrap dòng */
+    overflow: hidden; /* Ẩn nội dung tràn */
+    text-overflow: ellipsis; /* Hiển thị dấu ... */
+    margin-right: 10px; /* Khoảng cách giữa tên và nút */
+}
+
+.session-list button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Màu nền cho nút */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.session-list button:hover {
+    background-color: #0056b3; /* Màu khi hover */
+}
+

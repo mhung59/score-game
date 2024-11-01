@@ -1,0 +1,98 @@
+/* src/styles/modal.css */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Đặt z-index thấp hơn */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px; /* Bo góc mềm mại hơn */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ nhàng */
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    overflow-y: auto; /* Thêm khả năng cuộn dọc */
+    max-height: 80vh; /* Giới hạn chiều cao tối đa */
+}
+
+/* Tiêu đề modal */
+.modal-content h2 {
+    margin: 0 0 20px;
+    font-size: 24px; /* Kích thước chữ lớn hơn */
+    font-weight: 600; /* Đậm hơn */
+    color: #333; /* Màu chữ tối */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+/* Định dạng cho nhãn */
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555; /* Màu chữ nhạt hơn */
+    font-weight: 500; /* Đậm nhẹ */
+}
+
+/* Định dạng cho input */
+.modal-content input {
+    width: calc(100% - 24px); /* Chiều rộng 100% trừ khoảng cách bên trong */
+    padding: 12px; /* Khoảng cách bên trong lớn hơn */
+    margin-bottom: 15px; /* Khoảng cách dưới input lớn hơn */
+    border: 1px solid #ced4da; /* Viền màu xám */
+    border-radius: 5px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    transition: border-color 0.3s ease; /* Hiệu ứng chuyển màu viền */
+}
+
+/* Hiệu ứng focus cho input */
+.modal-content input:focus {
+    border-color: #007bff; /* Màu viền khi focus */
+    outline: none; /* Không có viền bên ngoài khi focus */
+}
+
+/* Định dạng cho nút trong modal */
+.modal-content button {
+    width: 100%; /* Chiều rộng 100% */
+    padding: 12px; /* Khoảng cách bên trong */
+    margin-top: 10px; /* Khoảng cách trên nút */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+}
+
+/* Nút thêm điểm */
+.modal-content button:nth-child(3) { /* Nút Thêm Điểm */
+    background-color: #28a745; /* Màu xanh lá cây */
+    color: white; /* Màu chữ trắng */
+}
+
+/* Nút đóng */
+.modal-content button:nth-child(4) { /* Nút Đóng */
+    background-color: #dc3545; /* Màu đỏ */
+    color: white; /* Màu chữ trắng */
+}
+
+/* Hiệu ứng hover cho nút thêm điểm */
+.modal-content button:nth-child(3):hover {
+    background-color: #218838; /* Màu xanh lá cây đậm hơn khi hover */
+}
+
+/* Hiệu ứng hover cho nút đóng */
+.modal-content button:nth-child(4):hover {
+    background-color: #c82333; /* Màu đỏ đậm hơn khi hover */
+}
+
+/* Hiệu ứng nhấn cho nút trong modal */
+.modal-content button:active {
+    transform: translateY(1px); /* Hiệu ứng nhấn xuống */
+}

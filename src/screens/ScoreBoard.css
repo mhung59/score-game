@@ -1,0 +1,184 @@
+/* src/styles/ScoreBoard.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6200ee; /* Màu nền cho header */
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Màu nền khi hover */
+}
+
+strong {
+    color: #6200ee; /* Màu cho tổng điểm */
+}
+
+/* src/screens/ScoreBoard.css */
+
+/* Định dạng cho nút Thêm Điểm */
+.add-score-button {
+    background-color: #28a745; /* Màu nền xanh lá cây */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo góc */
+    padding: 10px 20px; /* Khoảng cách bên trong */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+    margin-top: 15px; /* Khoảng cách trên nút */
+    display: inline-block; /* Hiển thị như một khối trong dòng */
+}
+
+.add-score-button:hover {
+    background-color: #218838; /* Màu nền khi hover */
+}
+
+.add-score-button:active {
+    background-color: #1e7e34; /* Màu nền khi nhấn */
+    transform: translateY(1px); /* Hiệu ứng nhấn xuống */
+}
+
+.add-score-button:disabled {
+    background-color: #cccccc; /* Màu nền cho nút vô hiệu */
+    cursor: not-allowed; /* Con trỏ cho nút vô hiệu */
+    opacity: 0.6; /* Độ mờ cho nút vô hiệu */
+}
+
+/* src/screens/ScoreBoard.css */
+
+/* Định dạng cho nút Trở về */
+.back-button {
+    background-color: #6c757d; /* Màu xám */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo góc */
+    padding: 10px 20px; /* Khoảng cách bên trong */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+    margin-bottom: 15px; /* Khoảng cách dưới nút */
+}
+
+.back-button:hover {
+    background-color: #5a6268; /* Màu nền khi hover */
+}
+
+.back-button:active {
+    background-color: #343a40; /* Màu nền khi nhấn */
+    transform: translateY(1px); /* Hiệu ứng nhấn xuống */
+}
+
+/* src/styles/ScoreBoard.css */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+}
+
+table th,
+table td {
+    border: 1px solid #dee2e6; /* Viền cho bảng */
+    padding: 8px; /* Khoảng cách trong ô */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+.table-container {
+    max-height: 600px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Thêm thanh cuộn dọc */
+    margin-bottom: 20px; /* Khoảng cách dưới bảng */
+}
+
+.scoreboard-container {
+    position: relative;
+    max-height: 1000px; /* Giới hạn chiều cao cho bảng */
+    overflow-y: auto; /* Thêm cuộn cho chiều cao nếu vượt quá giới hạn */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2; /* Màu nền cho header */
+    position: sticky; /* Để header dính khi cuộn */
+    top: 0; /* Vị trí dính ở trên cùng */
+    z-index: 2; /* Đảm bảo header nằm trên nội dung */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.total-row {
+    background-color: #e9f7fe; /* Màu nền cho hàng tổng điểm */
+    font-weight: bold; /* Chữ đậm cho tổng điểm */
+}
+
+/* Điều chỉnh để hàng tổng điểm không bị cuộn */
+.total-row td {
+    position: sticky;
+    bottom: 0;
+    z-index: 1; /* Đảm bảo hàng tổng điểm nằm trên cùng */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #87CEEB; /* Màu xanh da trời cho header */
+    position: sticky; /* Để header dính khi cuộn */
+    top: 0; /* Vị trí dính ở trên cùng */
+    z-index: 2; /* Đảm bảo header nằm trên nội dung */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.total-row {
+    background-color: #e9f7fe; /* Màu nền cho hàng tổng điểm */
+    font-weight: bold; /* Chữ đậm cho tổng điểm */
+}
+
+/* Điều chỉnh để hàng tổng điểm không bị cuộn */
+.total-row td {
+    position: sticky;
+    bottom: 0;
+    z-index: 1; /* Đảm bảo hàng tổng điểm nằm trên cùng */
+}
+
+
+
