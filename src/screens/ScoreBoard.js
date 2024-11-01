@@ -78,9 +78,9 @@ const ScoreBoard = () => {
     const totalScores = calculateTotalScores();
 
     return (
-        <div>
+        <div className="session-list">
             <h1>Bảng Điểm</h1>
-            <button className={"back-button"} onClick={() => navigate(-1)}>Trở về</button>
+            <button className={"back-button"} onClick={() => navigate("/")}>Trở về</button>
             <span style={{marginLeft: "250px", fontWeight: "bold"}}>{scores.length}</span>
             {players.length === 0 ? (
                 <p>Chưa có người chơi.</p>
