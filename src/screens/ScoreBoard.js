@@ -4,6 +4,7 @@ import { database } from '../firebase';
 import { ref, onValue, set } from 'firebase/database';
 import ScoreInputModal from '../components/ScoreInputModal';
 import './ScoreBoard.css';
+import {VscAdd, VscArrowLeft} from "react-icons/vsc";
 
 const ScoreBoard = () => {
     const { sessionId } = useParams();
@@ -117,18 +118,17 @@ const ScoreBoard = () => {
                     </div>
 
                     <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                        <button className={"back-button"} onClick={() => navigate("/")}>Trở về</button>
-                        <div style={{textAlign: "center"}}>
+                        <button className={"back-button"} onClick={() => navigate("/")}><VscArrowLeft /></button>
+                        <div style={{textAlign: "center", marginTop: "15px",}}>
                             <span style={{
                                 fontWeight: "bold",
-                                marginBottom: "20px",
                                 fontSize: "25px"
                             }}>{scores.length}</span>
                         </div>
                         <button className={"add-score-button"} onClick={() => {
                             setModalOpen(true);
                             setNewScore(Array(players.length).fill('')); // Đặt lại điểm nếu không chỉnh sửa
-                        }}>Thêm Điểm
+                        }}><VscAdd />
                         </button>
                     </div>
 
