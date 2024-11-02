@@ -81,7 +81,7 @@ const ScoreBoard = () => {
         <div className="session-list">
             <h1 style={{textAlign: "center"}}>Bảng Điểm</h1>
             <div style={{textAlign: "center"}}>
-                <span style={{fontWeight: "bold", background: "red", padding: "10px", marginBottom: "50px", color: "white", borderRadius: "50%"}}>{scores.length}</span>
+                <span style={{fontWeight: "bold", marginBottom: "20px", fontSize: "25px"}}>{scores.length}</span>
             </div>
             <br/>
             {players.length === 0 ? (
