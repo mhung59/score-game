@@ -79,11 +79,7 @@ const ScoreBoard = () => {
 
     return (
         <div className="session-list">
-            <h1 style={{textAlign: "center"}}>Bảng Điểm</h1>
-            <div style={{textAlign: "center"}}>
-                <span style={{fontWeight: "bold", marginBottom: "20px", fontSize: "25px"}}>{scores.length}</span>
-            </div>
-            <br/>
+
             {players.length === 0 ? (
                 <p>Chưa có người chơi.</p>
             ) : (
@@ -122,6 +118,13 @@ const ScoreBoard = () => {
 
                     <div style={{display: 'flex', justifyContent: 'space-between'}}>
                         <button className={"back-button"} onClick={() => navigate("/")}>Trở về</button>
+                        <div style={{textAlign: "center"}}>
+                            <span style={{
+                                fontWeight: "bold",
+                                marginBottom: "20px",
+                                fontSize: "25px"
+                            }}>{scores.length}</span>
+                        </div>
                         <button className={"add-score-button"} onClick={() => {
                             setModalOpen(true);
                             setNewScore(Array(players.length).fill('')); // Đặt lại điểm nếu không chỉnh sửa
@@ -130,10 +133,10 @@ const ScoreBoard = () => {
                     </div>
 
                     <ScoreInputModal
-                    isOpen={isModalOpen}
-                    onClose={() => {
-                    setModalOpen(false);
-                    setEditingScoreRow(null); // Reset editing state
+                        isOpen={isModalOpen}
+                        onClose={() => {
+                            setModalOpen(false);
+                            setEditingScoreRow(null); // Reset editing state
                 }}
                 onAddScore={addScoreRow}
                 onUpdateScore={updateScoreRow}
