@@ -90,7 +90,7 @@ table td {
 }
 
 .table-container {
-    max-height: 600px; /* Giới hạn chiều cao */
+    max-height: 500px; /* Giới hạn chiều cao */
     overflow-y: auto; /* Thêm thanh cuộn dọc */
     margin-bottom: 20px; /* Khoảng cách dưới bảng */
 }
